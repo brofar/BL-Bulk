@@ -1,0 +1,7 @@
+.align-bot {
+  flex-direction: column;
+}
+
+.align-bot p:last-child {
+  margin-top: auto;
+}
