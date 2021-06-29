@@ -3,7 +3,7 @@ const requirements = {
     'move_devices': ['deviceId', 'orgId'],
     'assign_users_to_devices': ['first_name', 'last_name', 'orgId', 'deviceId'],
     'check_device_orgs': ['deviceId'],
-    'create_users': ['first_name', 'last_name', 'has_account', 'orgId'],
+    'create_users': ['first_name', 'last_name', 'has_account', 'employee_id', 'email', 'orgId', 'mobile_phone_number', 'home_phone_number', 'work_phone_number', 'job_title', 'company', 'street_address', 'postal_code', 'city', 'province', 'country'],
     'rename_devices': ['deviceId', 'orgId', 'name'],
     'add_devices_to_group': ['deviceId', 'orgId', 'groupName'],
     'add_to_config_profile': ['deviceId', 'orgId', 'configuration'],
@@ -14,25 +14,6 @@ const requirements = {
     'activate_dock': ['deviceId', 'orgId'],
     'create_groups': ['groupName', 'orgId'],
 };
-
-/*
-document.body.addEventListener('change', function (e) {
-const rows = [
-    ["name1", "city1", "some other info"],
-    ["name2", "city2", "more info"]
-];
-
-let csvContent = "data:text/csv;charset=utf-8," 
-    + rows.map(e => e.join(",")).join("\n");
-var encodedUri = encodeURI(csvContent);
-var link = document.createElement("a");
-link.setAttribute("href", encodedUri);
-link.setAttribute("download", "my_data.csv");
-document.body.appendChild(link); // Required for FF
-
-link.click(); // This will download the data file named "my_data.csv".
-});
-*/
 
 function CreateCSV(cols, type) {
 
