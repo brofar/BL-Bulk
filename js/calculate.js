@@ -3,7 +3,7 @@ const requirements = {
     'move_devices': ['deviceId', 'orgId'],
     'assign_users_to_devices': ['first_name', 'last_name', 'orgId', 'deviceId'],
     'check_device_orgs': ['deviceId'],
-    'create_users': ['first_name', 'last_name', 'has_account', 'employee_id', 'email', 'orgId', 'mobile_phone_number', 'home_phone_number', 'work_phone_number', 'job_title', 'company', 'street_address', 'postal_code', 'city', 'province', 'country'],
+    'create_users': ['first_name', 'last_name', 'CONTACT or ACCT USER', 'employee_id', 'email', 'orgId', 'mobile_phone_number', 'home_phone_number', 'work_phone_number', 'job_title', 'company', 'street_address', 'postal_code', 'city', 'province', 'country'],
     'rename_devices': ['deviceId', 'orgId', 'name'],
     'add_devices_to_group': ['deviceId', 'orgId', 'groupName'],
     'add_to_config_profile': ['deviceId', 'orgId', 'configuration'],
@@ -59,3 +59,9 @@ function Generate(e) {
 for (let elm of document.querySelectorAll("button")) {
   elm.onclick = Generate;
 }
+
+// Initialize Bootstrap Tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})

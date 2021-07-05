@@ -5,3 +5,11 @@
 .align-bot p:last-child {
   margin-top: auto;
 }
+
+a:link, a:visited, a:hover {
+  color:inherit;
+}
+
+.tooltip.show p {
+  text-align:left;
+}
